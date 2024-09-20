@@ -8,24 +8,26 @@ h1 {
     color: #d2f2c6;
 }
 
+/*#region Navigation*/
+
 .navigation {
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
     list-style: none;
     margin: 0;
-    background: deepskyblue;
+    background: #2c3329;
 }
 
     .navigation a {
         text-decoration: none;
         display: block;
         padding: 1em;
-        color: white;
+        color: #d2f2c6;
     }
 
         .navigation a:hover {
-            background: #1565C0;
+            background: #394235;
         }
 
 @media all and (max-width: 800px) {
@@ -43,7 +45,7 @@ h1 {
         .navigation a {
             text-align: center;
             padding: 10px;
-            border-top: 1px solid rgba(255, 255, 255,0.3);
+            border-top: 1px solid rgba(210, 242, 198,0.3);
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         }
 
@@ -51,3 +53,4 @@ h1 {
             border-bottom: none;
         }
 }
+/*#endregion */
