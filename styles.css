@@ -60,7 +60,7 @@ h1 {
 .image-text-flex {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 20px;
     padding-top: 10px;
@@ -68,7 +68,7 @@ h1 {
 }
 
     .image-text-flex img {
-        height: 75px;
+        height: 150px;
         border-radius: 8px;
     }
 
