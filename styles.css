@@ -14,7 +14,7 @@ h1 {
     justify-content: flex-end;
     list-style: none;
     margin: 0;
-    background: deepskyblue;
+    background: #424d3e;
 }
 
 .navigation a {
@@ -24,9 +24,9 @@ h1 {
     color: white;
 }
 
-.navigation a:hover {
-    background: #424d3e;
-}
+    .navigation a:hover {
+        background: #53614e;
+    }
 
 @media all and (max-width: 800px) {
     .navigation {
@@ -40,12 +40,12 @@ h1 {
         padding: 0;
     }
 
-    .navigation a {
-        text-align: center;
-        padding: 10px;
-        border-top: 1px #d2f2c6;
-        border-bottom: 1px #d2f2c6;
-    }
+        .navigation a {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid rgba(204, 235, 191,0.3);
+            border-bottom: 1px solid rgba(204, 235, 191,0.3);
+        }
 
     .navigation li:last-of-type a {
         border-bottom: none;
