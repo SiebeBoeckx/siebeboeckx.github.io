@@ -54,3 +54,28 @@ h1 {
         }
 }
 /*#endregion */
+
+/*#region Image and Text Flexbox */
+
+.image-text-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    background-color: #141a14;
+}
+
+    .image-text-flex img {
+        max-width: 40%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .image-text-flex .text-content {
+        max-width: 55%;
+        color: #d2f2c6;
+        padding-left: 20px;
+    }
+
+/*#endregion */
