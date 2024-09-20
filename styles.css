@@ -65,6 +65,7 @@ h1 {
     padding: 40px;
     padding-top: 10px;
     background-color: #141a14;
+    flex-basis: auto;
 }
 
     .image-text-flex img {
