@@ -8,14 +8,46 @@ h1 {
     color: #d2f2c6;
 }
 
-.flex-container {
+.navigation {
     display: flex;
-    background-color: DodgerBlue;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    background: deepskyblue;
 }
 
-.flex-container > div {
-    background-color: #f1f1f1;
-    margin: 10px;
-    padding: 20px;
-    font-size: 30px;
+.navigation a {
+    text-decoration: none;
+    display: block;
+    padding: 1em;
+    color: white;
+}
+
+.navigation a:hover {
+    background: #424d3e;
+}
+
+@media all and (max-width: 800px) {
+    .navigation {
+        justify-content: space-around;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .navigation {
+        flex-flow: column wrap;
+        padding: 0;
+    }
+
+    .navigation a {
+        text-align: center;
+        padding: 10px;
+        border-top: 1px #d2f2c6;
+        border-bottom: 1px #d2f2c6;
+    }
+
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
 }
