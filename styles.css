@@ -86,7 +86,7 @@ h1 {
 /*#endregion */
 
 .video-wrapper {
-    width: 100%;
+    width: calc(100% - 40px); /* Full width minus total padding (20px on each side) */
     display: flex;
     justify-content: center;
     padding: 20px;
@@ -128,7 +128,7 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #181f18;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -137,7 +137,7 @@ h1 {
 }
 
 .overlay-text {
-    color: white;
+    color: #d2f2c6;
     font-size: 24px;
     text-align: center;
 }
