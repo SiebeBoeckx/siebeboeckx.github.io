@@ -73,7 +73,7 @@
                     const { x, y, width, height } = getTextPosition();
                     canvas.width = video.videoWidth;
                     canvas.height = video.videoHeight;
-                    ctx.drawImage(video, x, y, canvas.width, canvas.height);
+                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
                     const imageData = ctx.getImageData(x, y, width, height);
                     const data = imageData.data;
 
@@ -97,7 +97,7 @@
                 function updateTextColor() {
                     const { r, g, b } = getTextColor();
                     const avgColor = (r + g + b) / 3; // Calculate average brightness
-                    overlayText.style.color = avgColor < 128 ? '#d2f2c6' : '#000000'; // Set text color based on brightness
+                    overlayText.style.color = avgColor < 64 ? '#ffffff' : '#000000'; // Set text color based on brightness
                 }
 
 
@@ -109,7 +109,7 @@
                 function pauseVideo() {
                     video.pause(); // Pause the video in the current item
                     updateTextColor();
-                    overlay.style.opacity = '0.75'; // Show the overlay in the current item
+                    overlay.style.opacity = '1'; // Show the overlay in the current item
                 }
 
                 item.addEventListener('mouseenter', playVideo); // Play video on hover

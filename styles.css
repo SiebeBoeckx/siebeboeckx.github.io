@@ -115,7 +115,7 @@ h1 {
     }
 
         .video-item:hover ~ .video-item {
-            flex: 0.75; /* Non-hovered items shrink */
+            flex: 1; /* Non-hovered items shrink */
         }
 
 .vid {
@@ -133,7 +133,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.75;
+    opacity: 1;
     transition: opacity 0.3s ease;
 }
 
