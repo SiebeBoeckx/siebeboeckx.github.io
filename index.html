@@ -69,35 +69,48 @@
                     };
                 }
 
-                function getTextColor() {
-                    const { x, y, width, height } = getTextPosition();
+                function getColorUnderText() {
+                    const { x, y, height } = getTextPosition();
                     canvas.width = video.videoWidth;
                     canvas.height = video.videoHeight;
                     ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-                    const imageData = ctx.getImageData(x, y, width, height);
-                    const data = imageData.data;
+                    const data = ctx.getImageData(0, y, canvas.width, height).data;
 
-                    let r = 0, g = 0, b = 0, count = 0;
+                    const colors = [];
 
-                    for (let i = 0; i < data.length; i += 4) {
-                        r += data[i];     // Red
-                        g += data[i + 1]; // Green
-                        b += data[i + 2]; // Blue
-                        count++;
+                    for (let i = 0; i < overlayText.textContent.length; i++) {
+                        const letterWidth = ctx.measureText(overlayText.textContent[i]).width;
+                        const startX = x + ctx.measureText(overlayText.textContent.slice(0, i)).width;
+
+                        // Sample pixels under each letter
+                        const letterData = ctx.getImageData(startX, y, letterWidth, height).data;
+
+                        let r = 0, g = 0, b = 0, count = 0;
+
+                        for (let j = 0; j < letterData.length; j += 4) {
+                            r += letterData[j];     // Red
+                            g += letterData[j + 1]; // Green
+                            b += letterData[j + 2]; // Blue
+                            count++;
+                        }
+
+                        // Average color for the letter
+                        r = Math.floor(r / count);
+                        g = Math.floor(g / count);
+                        b = Math.floor(b / count);
+                        colors.push({ r, g, b });
                     }
 
-                    // Calculate average color
-                    r = Math.floor(r / count);
-                    g = Math.floor(g / count);
-                    b = Math.floor(b / count);
-
-                    return { r, g, b };
+                    return colors;
                 }
 
                 function updateTextColor() {
-                    const { r, g, b } = getTextColor();
-                    const avgColor = (r + g + b) / 3; // Calculate average brightness
-                    overlayText.style.color = avgColor < 64 ? '#ffffff' : '#000000'; // Set text color based on brightness
+                    const colors = getColorUnderText();
+                    colors.forEach((color, index) => {
+                        const avgColor = (color.r + color.g + color.b) / 3; // Calculate average brightness
+                        const textColor = avgColor < 128 ? '#d2f2c6' : '#000000'; // Set text color based on brightness
+                        overlayText.children[index].style.color = textColor; // Update each letter's color
+                    });
                 }
 
 
