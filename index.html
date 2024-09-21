@@ -18,7 +18,7 @@
 
     <div class="image-text-flex">
         <div class="text-content">
-            <h1>Projects</h1>
+            <h1>My Portfolio</h1>
         </div>
         <img src="Images/Me.jpg" alt="Me">
     </div>
@@ -29,6 +29,7 @@
                 <video src="Videos/Plunder 'n Pints Trailer.mp4"
                        type="video/mp4" class="vid" loop muted>
                 </video>
+                <canvas class="color-canvas" style="display:none;"></canvas> <!-- Hidden canvas -->
                 <div class="overlay">
                     <div class="overlay-text">Plunder 'n Pints</div>
                 </div>
@@ -37,6 +38,7 @@
                 <video src="Videos/AmberTheWitch.mp4"
                        type="video/mp4" class="vid" loop muted>
                 </video>
+                <canvas class="color-canvas" style="display:none;"></canvas> <!-- Hidden canvas -->
                 <div class="overlay">
                     <div class="overlay-text">Amber the Witch</div>
                 </div>
@@ -51,6 +53,52 @@
             videoItems.forEach(item => {
                 const video = item.querySelector('.vid'); // Select the video inside the current item
                 const overlay = item.querySelector('.overlay'); // Select the overlay inside the current item
+                const canvas = item.querySelector('.color-canvas'); // Select the hidden canvas
+                const ctx = canvas.getContext('2d');
+
+                //Text opposite color part
+          
+                function getTextPosition() {
+                    const rect = overlayText.getBoundingClientRect();
+                    return {
+                        x: Math.floor(rect.left),
+                        y: Math.floor(rect.top),
+                        width: Math.floor(rect.width),
+                        height: Math.floor(rect.height)
+                    };
+                }
+
+                function getTextColor() {
+                    const { x, y, width, height } = getTextPosition();
+                    canvas.width = video.videoWidth;
+                    canvas.height = video.videoHeight;
+                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+                    const imageData = ctx.getImageData(x, y, width, height);
+                    const data = imageData.data;
+
+                    let r = 0, g = 0, b = 0, count = 0;
+
+                    for (let i = 0; i < data.length; i += 4) {
+                        r += data[i];     // Red
+                        g += data[i + 1]; // Green
+                        b += data[i + 2]; // Blue
+                        count++;
+                    }
+
+                    // Calculate average color
+                    r = Math.floor(r / count);
+                    g = Math.floor(g / count);
+                    b = Math.floor(b / count);
+
+                    return { r, g, b };
+                }
+
+                function updateTextColor() {
+                    const { r, g, b } = getTextColor();
+                    const avgColor = (r + g + b) / 3; // Calculate average brightness
+                    overlayText.style.color = avgColor < 128 ? '#d2f2c6' : '#000000'; // Set text color based on brightness
+                }
+
 
                 function playVideo() {
                     video.play(); // Play the video in the current item
