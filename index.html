@@ -40,12 +40,12 @@
 
             function playVideo() {
                 video.play();
-                overlay.style.opacity = '1';
+                overlay.style.opacity = '0';
             }
 
             function pauseVideo() {
                 video.pause();
-                overlay.style.opacity = '0';
+                overlay.style.opacity = '1';
             }
 
             videoContainer.addEventListener('mouseenter', playVideo);
