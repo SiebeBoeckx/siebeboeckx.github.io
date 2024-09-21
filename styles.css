@@ -84,3 +84,85 @@ h1 {
     }
 
 /*#endregion */
+
+/*#region project showcase*/
+
+.showcase {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    background: #141a14;
+    flex-grow: 1;
+    padding: 0;
+}
+
+    .showcase li {
+        position: relative;
+        width: 300px;
+        margin: 1em;
+    }
+
+    .showcase a {
+        text-decoration: none;
+        display: block;
+        padding: 1em;
+        color: #d2f2c6;
+    }
+
+        .showcase a:hover {
+            background: #394235;
+            flex-grow: 4;
+        }
+
+.text-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    font-size: 18px;
+    transition: color 0.2s ease;
+}
+
+.hover-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media all and (max-width: 600px) {
+    .showcase {
+        flex-flow: column nowrap;
+        padding: 0;
+    }
+
+        .showcase li {
+            width: 100%; /* Make each video take full width on mobile */
+            margin: 0;
+        }
+
+        .showcase a {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid rgba(210, 242, 198, 0.3);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            display: block; /* Ensure it's displayed as a block element */
+        }
+
+        .showcase li:last-of-type a {
+            border-bottom: none;
+        }
+
+    .hover-video {
+        width: 100%; /* Ensure videos are responsive and take full width */
+        height: auto;
+    }
+
+    .text-overlay {
+        font-size: 16px; /* Slightly smaller text size for mobile */
+        left: 50%; /* Center text horizontally */
+        transform: translateX(-50%); /* Centering trick */
+    }
+}
+/*#endregion */
