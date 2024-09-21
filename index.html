@@ -23,17 +23,39 @@
         <img src="Images/Me.jpg" alt="Me">
     </div>
 
-    <ul class="showcase">
-        <li>
-            <a href="#">
-                <div class="Plunder 'n' Pints">Text Above Video</div>
-                <video class="hover-video" muted preload="metadata">
-                    <source src="Plunder 'n Pints Trailer.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </a>
-        </li>
-    </ul>
+    <div class="video-container">
+        <video src="https://www.youtube.com/watch?v=Jbn9GAvl4PI&t.mp4"
+               type="video/mp4" muted class="vid" loop>
+        </video>
+        <div class="overlay">
+            <div class="overlay-text">Plunder 'n Pints'</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const videoContainer = document.querySelector('.video-container');
+            const video = document.querySelector('.vid');
+            const overlay = document.querySelector('.overlay');
+
+            function playVideo() {
+                video.play();
+                overlay.style.opacity = '0';
+            }
+
+            function pauseVideo() {
+                video.pause();
+                overlay.style.opacity = '1';
+            }
+
+            videoContainer.addEventListener('mouseenter', playVideo);
+            videoContainer.addEventListener('mouseleave', pauseVideo);
+
+            // Add touch support for mobile devices
+            videoContainer.addEventListener('touchstart', playVideo);
+            videoContainer.addEventListener('touchend', pauseVideo);
+        });
+    </script>
 
 </body>
 </html>
