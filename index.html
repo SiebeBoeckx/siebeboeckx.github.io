@@ -47,27 +47,27 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const videoItems = document.querySelectorAll('.video-item'); // Select all video items
+
             videoItems.forEach(item => {
+                const video = item.querySelector('.vid'); // Select the video inside the current item
+                const overlay = item.querySelector('.overlay'); // Select the overlay inside the current item
 
-            const video = item.querySelector('.vid');
-            const overlay = item.querySelector('.overlay');
+                function playVideo() {
+                    video.play(); // Play the video in the current item
+                    overlay.style.opacity = '0'; // Hide the overlay in the current item
+                }
 
-            function playVideo() {
-                video.play();
-                overlay.style.opacity = '0';
-            }
+                function pauseVideo() {
+                    video.pause(); // Pause the video in the current item
+                    overlay.style.opacity = '1'; // Show the overlay in the current item
+                }
 
-            function pauseVideo() {
-                video.pause();
-                overlay.style.opacity = '1';
-            }
+                item.addEventListener('mouseenter', playVideo); // Play video on hover
+                item.addEventListener('mouseleave', pauseVideo); // Pause video when hover ends
 
-            videoContainer.addEventListener('mouseenter', playVideo);
-            videoContainer.addEventListener('mouseleave', pauseVideo);
-
-            // Add touch support for mobile devices
-            videoContainer.addEventListener('touchstart', playVideo);
-            videoContainer.addEventListener('touchend', pauseVideo);
+                // Add touch support for mobile devices
+                item.addEventListener('touchstart', playVideo); // Play video on touchstart
+                item.addEventListener('touchend', pauseVideo); // Pause video on touchend
             });
         });
     </script>
