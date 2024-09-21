@@ -117,8 +117,8 @@ h1 {
         }
 
 .vid {
-    width: 100%;
-    height: 100%;
+    width: 75%;
+    height: 75%;
     display: block;
 }
 
@@ -126,13 +126,13 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 75%;
+    height: 75%;
     background-color: #181f18;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 1;
+    opacity: 0.5;
     transition: opacity 0.3s ease;
 }
 
