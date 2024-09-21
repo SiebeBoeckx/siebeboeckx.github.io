@@ -135,6 +135,7 @@ h1 {
     align-items: center;
     opacity: 1;
     transition: opacity 0.3s ease;
+    background-color: #181f18;
 }
 
 .overlay-text {

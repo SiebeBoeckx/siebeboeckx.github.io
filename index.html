@@ -29,7 +29,6 @@
                 <video src="Videos/Plunder 'n Pints Trailer.mp4"
                        type="video/mp4" class="vid" loop muted>
                 </video>
-                <canvas class="color-canvas" style="display:none;"></canvas> <!-- Hidden canvas -->
                 <div class="overlay">
                     <div class="overlay-text">Plunder 'n Pints</div>
                 </div>
@@ -38,7 +37,6 @@
                 <video src="Videos/AmberTheWitch.mp4"
                        type="video/mp4" class="vid" loop muted>
                 </video>
-                <canvas class="color-canvas" style="display:none;"></canvas> <!-- Hidden canvas -->
                 <div class="overlay">
                     <div class="overlay-text">Amber the Witch</div>
                 </div>
@@ -53,66 +51,6 @@
             videoItems.forEach(item => {
                 const video = item.querySelector('.vid'); // Select the video inside the current item
                 const overlay = item.querySelector('.overlay'); // Select the overlay inside the current item
-                const canvas = item.querySelector('.color-canvas'); // Select the hidden canvas
-                const ctx = canvas.getContext('2d');
-                const overlayText = overlay.querySelector('.overlay-text');
-
-                //Text opposite color part
-          
-                function getTextPosition() {
-                    const rect = overlayText.getBoundingClientRect();
-                    return {
-                        x: Math.floor(rect.left),
-                        y: Math.floor(rect.top),
-                        width: Math.floor(rect.width),
-                        height: Math.floor(rect.height)
-                    };
-                }
-
-                function getColorUnderText() {
-                    const { x, y, height } = getTextPosition();
-                    canvas.width = video.videoWidth;
-                    canvas.height = video.videoHeight;
-                    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-                    const data = ctx.getImageData(0, y, canvas.width, height).data;
-
-                    const colors = [];
-
-                    for (let i = 0; i < overlayText.textContent.length; i++) {
-                        const letterWidth = ctx.measureText(overlayText.textContent[i]).width;
-                        const startX = x + ctx.measureText(overlayText.textContent.slice(0, i)).width;
-
-                        // Sample pixels under each letter
-                        const letterData = ctx.getImageData(startX, y, letterWidth, height).data;
-
-                        let r = 0, g = 0, b = 0, count = 0;
-
-                        for (let j = 0; j < letterData.length; j += 4) {
-                            r += letterData[j];     // Red
-                            g += letterData[j + 1]; // Green
-                            b += letterData[j + 2]; // Blue
-                            count++;
-                        }
-
-                        // Average color for the letter
-                        r = Math.floor(r / count);
-                        g = Math.floor(g / count);
-                        b = Math.floor(b / count);
-                        colors.push({ r, g, b });
-                    }
-
-                    return colors;
-                }
-
-                function updateTextColor() {
-                    const colors = getColorUnderText();
-                    colors.forEach((color, index) => {
-                        const avgColor = (color.r + color.g + color.b) / 3; // Calculate average brightness
-                        const textColor = avgColor < 128 ? '#d2f2c6' : '#000000'; // Set text color based on brightness
-                        overlayText.children[index].style.color = textColor; // Update each letter's color
-                    });
-                }
-
 
                 function playVideo() {
                     video.play(); // Play the video in the current item
@@ -121,7 +59,6 @@
 
                 function pauseVideo() {
                     video.pause(); // Pause the video in the current item
-                    updateTextColor();
                     overlay.style.opacity = '1'; // Show the overlay in the current item
                 }
 
