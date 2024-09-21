@@ -106,7 +106,7 @@ h1 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: flex 0.3s ease, transform 0.3s ease;
-    height: 300px; /* Set a constant height for the videos */
+    height: 500px; /* Set a constant height for the videos */
 }
 
     .video-item:hover {
