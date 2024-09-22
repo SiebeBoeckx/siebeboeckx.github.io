@@ -72,6 +72,7 @@ h1 {
     .image-text-flex img {
         height: 200px;
         border-radius: 8px;
+        align-items: flex-end;
     }
 
     .image-text-flex .text-content {
