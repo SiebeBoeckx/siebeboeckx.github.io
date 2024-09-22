@@ -139,6 +139,12 @@ h1 {
     z-index: 2;
 }
 
+.overlay-text-title {
+    color: #d2f2c6;
+    font-size: 30px;
+    text-align: center;
+}
+
 .overlay-text {
     color: #d2f2c6;
     font-size: 24px;
