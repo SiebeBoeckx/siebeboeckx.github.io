@@ -120,7 +120,7 @@
             subtitles.forEach(subtitle => {
                 const textWidth = subtitle.scrollWidth; // Get the width of the text
                 const parentWidth = subtitle.parentElement.clientWidth; // Get the width of the parent container
-                const marginLeft = (parentWidth / 2) - (textWidth / 2); // Calculate the left margin
+                let marginLeft = (parentWidth / 2) - (textWidth / 2); // Calculate the left margin
 
                 if (marginLeft < 20) {
                     marginLeft = 20;
@@ -130,7 +130,20 @@
             });
         }
 
-        setInterval(updateSubtitlePadding, 100);
+        // Using ResizeObserver to watch for changes in parent element's width
+        const resizeObserver = new ResizeObserver(entries => {
+            for (let entry of entries) {
+                if (entry.contentBoxSize) {
+                    updateSubtitlePadding(); // Call the function when size changes
+                }
+            }
+        });
+
+        // Apply ResizeObserver to parent elements of all subtitles
+        const subtitleParents = document.querySelectorAll('.subtitle').forEach(subtitle => {
+            const parent = subtitle.parentElement;
+            resizeObserver.observe(parent); // Observe changes to the parent element
+        });
     </script>
 </body>
 </html>
