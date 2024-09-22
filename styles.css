@@ -84,6 +84,19 @@ h1 {
         text-align: center;
     }
 
+        .image-text-flex .text-content .title {
+            font-size: 36px; /* Size of the title */
+            font-weight: bold; /* Make the title bold */
+            margin-bottom: 10px; /* Space between title and subtitle */
+        }
+
+        .image-text-flex .text-content .subtitle {
+            font-size: 18px; /* Size of the additional text */
+            font-weight: normal;
+            line-height: 1.5; /* Adjust line height for better readability */
+            margin: 0;
+        }
+
 /*#endregion */
 
 /*#region Projects*/
@@ -93,6 +106,7 @@ h1 {
     display: flex;
     justify-content: center;
     padding: 20px;
+    padding-top: 10px;
 }
 
 .video-container {
