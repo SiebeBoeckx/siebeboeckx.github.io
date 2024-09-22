@@ -61,10 +61,9 @@ h1 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     /*padding: 40px;*/
     padding-right: 40px;
-    padding-top: 10px;
     background-color: #141a14;
     flex-basis: auto;
 }
