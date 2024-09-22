@@ -72,7 +72,7 @@ h1 {
     .image-text-flex img {
         height: 200px;
         border-radius: 8px;
-        align-items: flex-end;
+        align-self: flex-end;
     }
 
     .image-text-flex .text-content {
@@ -184,7 +184,7 @@ h1 {
     opacity: 0; /* Hide the overlay when the video is hovered */
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 900px) {
     .video-container {
         flex-direction: column; /* Stack the videos on top of each other on smaller screens */
     }
