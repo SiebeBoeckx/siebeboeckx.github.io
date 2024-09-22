@@ -79,6 +79,7 @@ h1 {
         padding-bottom: 20px;
         flex-grow: 1;
         align-self: center;
+        justify-content: start;
     }
 
         .image-text-flex .text-content .title {
