@@ -60,9 +60,10 @@ h1 {
 .image-text-flex {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     /*padding: 40px;*/
+    padding-right: 40px;
     padding-top: 10px;
     background-color: #141a14;
     flex-basis: auto;
