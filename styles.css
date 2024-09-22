@@ -64,6 +64,7 @@ h1 {
     align-items: center;
     /*padding: 40px;*/
     padding-right: 40px;
+    padding-left: 40px;
     background-color: #141a14;
     flex-basis: auto;
 }
@@ -96,6 +97,7 @@ h1 {
             max-width: 500px;
             text-align: start;
             padding-right: 20px;
+            padding-left: 20px;
         }
 
 /*#endregion */
