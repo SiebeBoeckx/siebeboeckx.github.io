@@ -173,6 +173,7 @@ h1 {
     text-align: start;
     max-width: 300px;
     padding-right: 20px;
+    line-height: 1.2;
 }
 
 .video-item:hover .overlay {
