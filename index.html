@@ -123,11 +123,7 @@
                 });
             }
 
-            // Initial calculation
-            updateSubtitlePadding();
-
-            // Update on window resize
-            window.addEventListener('resize', updateSubtitlePadding);
+            setInterval(updateSubtitlePadding (), 100);
         });
     </script>
 </body>
