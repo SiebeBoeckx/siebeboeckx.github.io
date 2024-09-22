@@ -131,7 +131,7 @@ h1 {
 }
 
     .video-item:hover {
-        flex: 3; /* When hovered, this item expands to take 3x the space */
+        flex: 4; /* When hovered, this item expands to take 3x the space */
     }
 
         .video-item:hover ~ .video-item {
