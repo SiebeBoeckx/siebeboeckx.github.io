@@ -115,6 +115,10 @@
                 const parentWidth = subtitle.parentElement.clientWidth; // Get the width of the parent container
                 const marginLeft = (parentWidth / 2) - (textWidth / 2); // Calculate the left margin
 
+                if (marginLeft < 20) {
+                    marginLeft = 20;
+                }
+
                 subtitle.style.paddingLeft = `${marginLeft}px`; // Set the calculated padding
             });
         });

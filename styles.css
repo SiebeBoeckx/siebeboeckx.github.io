@@ -94,9 +94,9 @@ h1 {
             font-weight: normal;
             line-height: 1.5; /* Adjust line height for better readability */
             margin: 0;
-            max-width: 600px;
+            max-width: 500px;
             text-align: start;
-            padding-left: 20px;
+            padding-right: 20px;
         }
 
 /*#endregion */
@@ -168,10 +168,12 @@ h1 {
     font-weight: bold;
 }
 
-.overlay-text {
+.overlay .subtitle {
     color: #d2f2c6;
     font-size: 16px;
-    text-align: center;
+    text-align: start;
+    max-width: 300px;
+    padding-right: 20px;
 }
 
 .video-item:hover .overlay {
