@@ -61,7 +61,7 @@ h1 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
     /*padding: 40px;*/
     padding-right: 40px;
     background-color: #141a14;
