@@ -77,15 +77,14 @@ h1 {
 
     .image-text-flex .text-content {
         color: #d2f2c6;
-        padding: 20px;
-        font-size: 36px;
+        padding-bottom: 20px;
         align-self: center;
         flex-grow: 1;
         text-align: center;
     }
 
         .image-text-flex .text-content .title {
-            font-size: 36px; /* Size of the title */
+            font-size: 30px; /* Size of the title */
             font-weight: bold; /* Make the title bold */
             margin-bottom: 10px; /* Space between title and subtitle */
         }
@@ -160,7 +159,7 @@ h1 {
 
 .overlay-text-title {
     color: #d2f2c6;
-    font-size: 30px;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 10px;
     font-weight: bold;
@@ -168,7 +167,7 @@ h1 {
 
 .overlay-text {
     color: #d2f2c6;
-    font-size: 18px;
+    font-size: 16px;
     text-align: center;
 }
 
