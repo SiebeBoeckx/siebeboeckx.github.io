@@ -108,19 +108,27 @@
                 item.addEventListener('touchend', pauseVideo); // Pause video on touchend
             });
 
-            const subtitles = document.querySelectorAll('.subtitle');
+            function updateSubtitlePadding() {
+                const subtitles = document.querySelectorAll('.subtitle');
 
-            subtitles.forEach(subtitle => {
-                const textWidth = subtitle.scrollWidth; // Get the width of the text
-                const parentWidth = subtitle.parentElement.clientWidth; // Get the width of the parent container
-                const marginLeft = (parentWidth / 2) - (textWidth / 2); // Calculate the left margin
+                subtitles.forEach(subtitle => {
+                    const textWidth = subtitle.scrollWidth; // Get the width of the text
+                    const parentWidth = subtitle.parentElement.clientWidth; // Get the width of the parent container
+                    const marginLeft = (parentWidth / 2) - (textWidth / 2); // Calculate the left margin
 
-                if (marginLeft < 20) {
-                    marginLeft = 20;
-                }
+                    if (marginLeft < 20) {
+                        marginLeft = 20;
+                    }
 
-                subtitle.style.paddingLeft = `${marginLeft}px`; // Set the calculated padding
-            });
+                    subtitle.style.paddingLeft = `${marginLeft}px`; // Set the calculated padding
+                });
+            }
+
+            // Initial calculation
+            updateSubtitlePadding();
+
+            // Update on window resize
+            window.addEventListener('resize', updateSubtitlePadding);
         });
     </script>
 </body>
