@@ -192,10 +192,11 @@ h1 {
     gap: 15px; /* Space between the icons */
     height: 30px; /* Set the height of the container */
     padding: 5px;
+    padding-right: 40px;
 }
 
 .social-icon img {
-    width: 30px; /* Adjust size of the icons */
+    width: 25px; /* Adjust size of the icons */
     height: auto;
     transition: transform 0.3s ease, filter 0.3s ease;
     filter: invert(75%) sepia(50%) saturate(200%) hue-rotate(90deg);
