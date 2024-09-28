@@ -103,13 +103,32 @@ h1 {
 
 @media all and (max-width: 900px) {
     .image-text-flex {
-        flex-direction: column; /* Stack the videos on top of each other on smaller screens */
+        flex-direction: column; /* Stack the image and text on smaller screens */
+        align-items: center; /* Center the content */
+        padding-left: 20px; /* Adjust padding for smaller screens */
+        padding-right: 20px;
     }
+
+        .image-text-flex img {
+            align-self: center; /* Center the image when stacked */
+            margin-bottom: 20px; /* Add some space below the image */
+        }
+
+        .image-text-flex .text-content {
+            text-align: center; /* Center text when stacked */
+            padding-bottom: 0; /* Remove bottom padding on smaller screens */
+        }
+
+            .image-text-flex .text-content .subtitle {
+                text-align: center; /* Center subtitle for smaller screens */
+                padding-right: 0;
+                padding-left: 0;
+            }
 }
 
-    /*#endregion */
+/*#endregion */
 
-    /*#region Projects*/
+/*#region Projects*/
 
 .video-wrapper {
     width: calc(100% - 40px); /* Full width minus total padding (20px on each side) */
