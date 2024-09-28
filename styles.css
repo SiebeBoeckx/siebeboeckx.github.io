@@ -94,7 +94,7 @@ a {
             text-align: center;
         }
 
-        .image-text-flex .subtitle .text {
+        .image-text-flex .subtitle .text-content {
             font-size: 18px; /* Size of the additional text */
             font-weight: normal;
             line-height: 1.5; /* Adjust line height for better readability */
