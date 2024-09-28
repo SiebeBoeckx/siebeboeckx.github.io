@@ -90,6 +90,7 @@ a {
             font-size: 30px; /* Size of the title */
             font-weight: bold; /* Make the title bold */
             margin-bottom: 10px; /* Space between title and subtitle */
+            margin-top: 0px;
             text-align: center;
         }
 
