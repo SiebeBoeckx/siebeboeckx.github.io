@@ -191,13 +191,17 @@ a {
     z-index: 2;
 }
 
-    .overlay-text-title {
-        color: #d2f2c6;
-        font-size: 24px;
-        text-align: center;
-        margin-bottom: 10px;
-        font-weight: bold;
-    }
+.overlay-text-title {
+    color: #d2f2c6;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-shadow:    -1px -1px 0 #000,
+                    1px -1px 0 #000,
+                    -1px 1px 0 #000,
+                    1px 1px 0 #000;
+}
 
     .overlay .subtitle {
         color: #d2f2c6;
