@@ -81,6 +81,7 @@ a {
         border-radius: 8px;
         align-self: flex-start;
         object-fit: contain;
+        overflow: hidden;
     }
 
     .image-text-flex .subtitle {
@@ -160,6 +161,7 @@ a {
         border-radius: 8px;
         align-self: flex-start;
         object-fit: contain;
+        overflow: hidden;
     }
 
     .image-text-flex-margin .subtitle {
