@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFormations</title>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Site navigation links-->
+    <ul class="navigation">
+        <li><a href="siebeboeckx.github.io">Home</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="Files/Siebe Boeckx Resume.docx" download="Siebe_Boeckx_Resume.docx">Download Resume</a></li>
+    </ul>
+
+    <!-- Plunder 'N Pints info -->
+    <div class="video-text-flex-margin">
+        <div class="subtitle">
+            <h1 class="title">AI Formations</h1>
+            <p class="text-content">
+                This was a solo research project where I made a group of agents follow the formation drawings the player made on the ground.
+                These drawings could be anything you could draw in 1 brush stroke and the agents would space themselves evenly across the drawing.<br>
+                To prevent agents walking in each other’s way and making the distance they needed to walk as small as possible,
+                I implemented the Hungarian algorithm to make point assignment across all agents as efficient as possible.<br>
+                Agents would also take walls into account and not try to path find into said obstacles.
+            </p>
+        </div>
+        <video class="video" autoplay muted loop playsinline>
+            <source src="Videos/Research Project.mp4" type="video/mp4" alt="Trailer">
+        </video>
+    </div>
+
+    <div class="video-text-flex-margin">
+        <video class="video" autoplay muted loop playsinline>
+            <source src="Videos/Before-After.mp4" type="video/mp4" alt="Showcase">
+        </video>
+        <div class="subtitle">
+            <p class="text-content">
+                In this project I learned to use mathematical algorithms on systems where you wouldn't expect them to be useful at first glance.<br>
+                I used th Hungarian Algorithm in this project so that the different agents would each select the most efficient point to move towards,
+                keeping the positions and options of the other agents in mind.<br>
+                The result was a coherent group of agents moving as smoothly as possible in group. As you can see in the video, the top showing the result
+                before applying the algorithm, and the bottom showing the result after the algorithm is used.
+            </p>
+        </div>
+    </div>
+
+    <div class="image-text-flex-margin">
+        <div class="subtitle">
+            <p class="title">
+                <a href="https://github.com/SiebeBoeckx/gpp-researchtopic-SiebeBoeckx">Link to the project</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
