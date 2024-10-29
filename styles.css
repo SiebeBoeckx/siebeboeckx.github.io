@@ -385,6 +385,7 @@ a {
 .tags {
     display: flex;
     justify-content: center; /* Center the tags horizontally */
+    align-items: end;
     flex-wrap: wrap; /* Allow tags to wrap if there are too many */
     margin-top: auto; /* Space above the tags */
     margin-bottom: 10px;
