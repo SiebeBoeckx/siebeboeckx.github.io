@@ -152,6 +152,7 @@ a {
         height: 200px;
         border-radius: 8px;
         align-self: flex-end;
+        max-width: 100%;
         object-fit: fill;
     }
 
@@ -226,6 +227,7 @@ a {
         height: 200px;
         border-radius: 8px;
         align-self: flex-end;
+        max-width: 100%;
         object-fit: fill; /* Ensures the video fills its container */
     }
 
