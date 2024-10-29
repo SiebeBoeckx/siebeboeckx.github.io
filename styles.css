@@ -133,16 +133,91 @@ a {
 
 /*#endregion */
 
-/*#region Video and Text Flexbox */
+/*#region Image and Text Flexbox margin */
 
-.video-text-flex {
+.image-text-flex-margin {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     /*padding: 40px;*/
-    padding-right: 40px;
-    padding-left: 40px;
+    padding: 40px;
+    padding-right: 200px;
+    padding-left: 200px;
+    background-color: #141a14;
+    flex-basis: auto;
+}
+
+    .image-text-flex img {
+        height: 200px;
+        border-radius: 8px;
+        align-self: flex-end;
+        object-fit: cover;
+    }
+
+    .image-text-flex .subtitle {
+        color: #d2f2c6;
+        padding-bottom: 20px;
+        align-self: center;
+        /*flex-grow: 1;*/
+        justify-content: center;
+    }
+
+        .image-text-flex .subtitle .title {
+            font-size: 30px; /* Size of the title */
+            font-weight: bold; /* Make the title bold */
+            margin-bottom: 10px; /* Space between title and subtitle */
+            margin-top: 0px;
+            text-align: center;
+        }
+
+        .image-text-flex .subtitle .text-content {
+            font-size: 18px; /* Size of the additional text */
+            font-weight: normal;
+            line-height: 1.5; /* Adjust line height for better readability */
+            margin: 0;
+            max-width: 500px;
+            text-align: start;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+@media all and (max-width: 900px) {
+    .image-text-flex {
+        flex-direction: column; /* Stack the image and text on smaller screens */
+        align-items: center; /* Center the content */
+        padding-left: 20px; /* Adjust padding for smaller screens */
+        padding-right: 20px;
+    }
+
+        .image-text-flex img {
+            align-self: center; /* Center the image when stacked */
+            margin-bottom: 20px; /* Add some space below the image */
+        }
+
+        .image-text-flex .text-content {
+            text-align: center; /* Center text when stacked */
+            padding-bottom: 0; /* Remove bottom padding on smaller screens */
+        }
+
+            .image-text-flex .text-content .subtitle {
+                text-align: center; /* Center subtitle for smaller screens */
+                padding-right: 0;
+                padding-left: 0;
+            }
+}
+
+/*#region Video and Text Flexbox margin */
+
+.video-text-flex-margin {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    /*padding: 40px;*/
+    padding: 40px;
+    padding-right: 200px;
+    padding-left: 2000px;
     background-color: #141a14;
     flex-basis: auto;
 }
