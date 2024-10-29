@@ -322,7 +322,7 @@ a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: flex 0.5s ease, transform 0.5s ease;
     height: 450px; /* Set a constant height for the videos */
-    background-color: #263026;
+    background-color: #202920;
     border: 2px solid #415441;
 }
 
