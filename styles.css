@@ -132,6 +132,79 @@ a {
 
 /*#endregion */
 
+/*#region Video and Text Flexbox */
+
+.video-text-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    /*padding: 40px;*/
+    padding-right: 40px;
+    padding-left: 40px;
+    background-color: #141a14;
+    flex-basis: auto;
+}
+
+    .video-text-flex video {
+        height: 200px;
+        border-radius: 8px;
+        align-self: flex-end;
+        object-fit: cover; /* Ensures the video fills its container */
+    }
+
+    .video-text-flex .subtitle {
+        color: #d2f2c6;
+        padding-bottom: 20px;
+        align-self: center;
+        /*flex-grow: 1;*/
+        justify-content: center;
+    }
+
+        .video-text-flex .subtitle .title {
+            font-size: 30px; /* Size of the title */
+            font-weight: bold; /* Make the title bold */
+            margin-bottom: 10px; /* Space between title and subtitle */
+            margin-top: 0px;
+            text-align: center;
+        }
+
+        .video-text-flex .subtitle .text-content {
+            font-size: 18px; /* Size of the additional text */
+            font-weight: normal;
+            line-height: 1.5; /* Adjust line height for better readability */
+            margin: 0;
+            max-width: 500px;
+            text-align: start;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+@media all and (max-width: 900px) {
+    .video-text-flex {
+        flex-direction: column; /* Stack the image and text on smaller screens */
+        align-items: center; /* Center the content */
+        padding-left: 20px; /* Adjust padding for smaller screens */
+        padding-right: 20px;
+    }
+
+        .video-text-flex video {
+            align-self: center; /* Center the image when stacked */
+            margin-bottom: 20px; /* Add some space below the image */
+        }
+
+        .video-text-flex .text-content {
+            text-align: center; /* Center text when stacked */
+            padding-bottom: 0; /* Remove bottom padding on smaller screens */
+        }
+
+            .video-text-flex .text-content .subtitle {
+                text-align: center; /* Center subtitle for smaller screens */
+                padding-right: 0;
+                padding-left: 0;
+            }
+}
+
 /*#region Projects*/
 
 .video-wrapper {
