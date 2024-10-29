@@ -76,6 +76,8 @@ a {
         height: auto;
         border-radius: 8px;
         align-self: flex-end;
+        flex-basis: 50%;
+        max-width: 100%;
         object-fit: contain;
     }
 
@@ -152,6 +154,7 @@ a {
         height: auto;
         border-radius: 8px;
         align-self: flex-end;
+        flex-basis: 50%;
         max-width: 100%;
         object-fit: contain;
     }
@@ -227,8 +230,9 @@ a {
         height: auto;
         border-radius: 8px;
         align-self: flex-end;
+        flex-basis: 50%;
         max-width: 100%;
-        object-fit: contain; /* Ensures the video fills its container */
+        object-fit: contain;
     }
 
     .video-text-flex-margin .subtitle {
