@@ -382,7 +382,7 @@ a {
         opacity: 0; /* Hide the overlay when the video is hovered */
 }
 
-overlay .tags {
+.tags {
     display: flex;
     justify-content: center; /* Center the tags horizontally */
     flex-wrap: wrap; /* Allow tags to wrap if there are too many */
@@ -390,15 +390,15 @@ overlay .tags {
     margin-bottom: 10px;
 }
 
-    overlay .tags .tag {
-        background: #141a14;
-        color: #d2f2c6;
-        border-radius: 5px;
-        padding: 5px 10px;
-        margin: 0 5px;
-        font-size: 14px;
-        text-align: center;
-    }
+.tag {
+    background: #141a14;
+    color: #d2f2c6;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 14px;
+    text-align: center;
+} 
 
 @media all and (max-width: 900px) {
     .video-container {
