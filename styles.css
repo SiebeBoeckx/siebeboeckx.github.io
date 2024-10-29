@@ -76,6 +76,7 @@ a {
         height: 200px;
         border-radius: 8px;
         align-self: flex-end;
+        object-fit: cover;
     }
 
     .image-text-flex .subtitle {
