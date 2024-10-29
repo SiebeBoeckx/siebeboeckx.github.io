@@ -386,7 +386,8 @@ overlay .tags {
     display: flex;
     justify-content: center; /* Center the tags horizontally */
     flex-wrap: wrap; /* Allow tags to wrap if there are too many */
-    margin-top: 10px; /* Space above the tags */
+    margin-top: auto; /* Space above the tags */
+    margin-bottom: 10px;
 }
 
 overlay .tags .tag {
