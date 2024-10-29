@@ -148,14 +148,14 @@ a {
     flex-basis: auto;
 }
 
-    .image-text-flex img {
+    .image-text-flex-margin img {
         height: 200px;
         border-radius: 8px;
         align-self: flex-end;
-        object-fit: cover;
+        object-fit: fill;
     }
 
-    .image-text-flex .subtitle {
+    .image-text-flex-margin .subtitle {
         color: #d2f2c6;
         padding-bottom: 20px;
         align-self: center;
@@ -163,7 +163,7 @@ a {
         justify-content: center;
     }
 
-        .image-text-flex .subtitle .title {
+        .image-text-flex-margin .subtitle .title {
             font-size: 30px; /* Size of the title */
             font-weight: bold; /* Make the title bold */
             margin-bottom: 10px; /* Space between title and subtitle */
@@ -171,7 +171,7 @@ a {
             text-align: center;
         }
 
-        .image-text-flex .subtitle .text-content {
+        .image-text-flex-margin .subtitle .text-content {
             font-size: 18px; /* Size of the additional text */
             font-weight: normal;
             line-height: 1.5; /* Adjust line height for better readability */
@@ -183,24 +183,24 @@ a {
         }
 
 @media all and (max-width: 900px) {
-    .image-text-flex {
+    .image-text-flex-margin {
         flex-direction: column; /* Stack the image and text on smaller screens */
         align-items: center; /* Center the content */
         padding-left: 20px; /* Adjust padding for smaller screens */
         padding-right: 20px;
     }
 
-        .image-text-flex img {
+        .image-text-flex-margin img {
             align-self: center; /* Center the image when stacked */
             margin-bottom: 20px; /* Add some space below the image */
         }
 
-        .image-text-flex .text-content {
+        .image-text-flex-margin .text-content {
             text-align: center; /* Center text when stacked */
             padding-bottom: 0; /* Remove bottom padding on smaller screens */
         }
 
-            .image-text-flex .text-content .subtitle {
+            .image-text-flex-margin .text-content .subtitle {
                 text-align: center; /* Center subtitle for smaller screens */
                 padding-right: 0;
                 padding-left: 0;
@@ -222,14 +222,14 @@ a {
     flex-basis: auto;
 }
 
-    .video-text-flex video {
+    .video-text-flex-margin video {
         height: 200px;
         border-radius: 8px;
         align-self: flex-end;
-        object-fit: cover; /* Ensures the video fills its container */
+        object-fit: fill; /* Ensures the video fills its container */
     }
 
-    .video-text-flex .subtitle {
+    .video-text-flex-margin .subtitle {
         color: #d2f2c6;
         padding-bottom: 20px;
         align-self: center;
@@ -237,7 +237,7 @@ a {
         justify-content: center;
     }
 
-        .video-text-flex .subtitle .title {
+        .video-text-flex-margin .subtitle .title {
             font-size: 30px; /* Size of the title */
             font-weight: bold; /* Make the title bold */
             margin-bottom: 10px; /* Space between title and subtitle */
@@ -245,7 +245,7 @@ a {
             text-align: center;
         }
 
-        .video-text-flex .subtitle .text-content {
+        .video-text-flex-margin .subtitle .text-content {
             font-size: 18px; /* Size of the additional text */
             font-weight: normal;
             line-height: 1.5; /* Adjust line height for better readability */
@@ -257,24 +257,24 @@ a {
         }
 
 @media all and (max-width: 900px) {
-    .video-text-flex {
+    .video-text-flex-margin {
         flex-direction: column; /* Stack the image and text on smaller screens */
         align-items: center; /* Center the content */
         padding-left: 20px; /* Adjust padding for smaller screens */
         padding-right: 20px;
     }
 
-        .video-text-flex video {
+        .video-text-flex-margin video {
             align-self: center; /* Center the image when stacked */
             margin-bottom: 20px; /* Add some space below the image */
         }
 
-        .video-text-flex .text-content {
+        .video-text-flex-margin .text-content {
             text-align: center; /* Center text when stacked */
             padding-bottom: 0; /* Remove bottom padding on smaller screens */
         }
 
-            .video-text-flex .text-content .subtitle {
+            .video-text-flex-margin .text-content .subtitle {
                 text-align: center; /* Center subtitle for smaller screens */
                 padding-right: 0;
                 padding-left: 0;
