@@ -76,7 +76,7 @@ a {
         height: auto;
         border-radius: 8px;
         align-self: flex-end;
-        object-fit: fill;
+        object-fit: contain;
     }
 
     .image-text-flex .subtitle {
@@ -153,7 +153,7 @@ a {
         border-radius: 8px;
         align-self: flex-end;
         max-width: 100%;
-        object-fit: fill;
+        object-fit: contain;
     }
 
     .image-text-flex-margin .subtitle {
@@ -228,7 +228,7 @@ a {
         border-radius: 8px;
         align-self: flex-end;
         max-width: 100%;
-        object-fit: cover; /* Ensures the video fills its container */
+        object-fit: contain; /* Ensures the video fills its container */
     }
 
     .video-text-flex-margin .subtitle {
