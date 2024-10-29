@@ -216,6 +216,8 @@ a {
             }
 }
 
+/*#endregion */
+
 /*#region Video and Text Flexbox margin */
 
 .video-text-flex-margin {
@@ -292,6 +294,8 @@ a {
                 padding-left: 0;
             }
 }
+
+/*#endregion */
 
 /*#region Projects*/
 
@@ -376,6 +380,23 @@ a {
 
     .video-item:hover .overlay {
         opacity: 0; /* Hide the overlay when the video is hovered */
+}
+
+overlay .tags {
+    display: flex;
+    justify-content: center; /* Center the tags horizontally */
+    flex-wrap: wrap; /* Allow tags to wrap if there are too many */
+    margin-top: 10px; /* Space above the tags */
+}
+
+overlay .tags .tag {
+    background-color: rgba(210, 242, 198, 0.8); /* Light background for visibility */
+    color: #181f18; /* Dark text for contrast */
+    border-radius: 5px; /* Rounded corners */
+    padding: 5px 10px; /* Some padding around the text */
+    margin: 0 5px; /* Space between tags */
+    font-size: 14px; /* Font size of the tags */
+    text-align: center; /* Center text inside the tag */
 }
 
 @media all and (max-width: 900px) {
