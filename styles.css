@@ -309,7 +309,6 @@ a {
 
 .video-container {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
     gap: 10px; /* Space between video items */
@@ -317,7 +316,7 @@ a {
 
 .video-item {
     position: relative;
-    flex: 0 1 calc(33.33% - 6.66px); /* 3 per row with gap compensation */
+    flex: 1; /* Each video takes an equal share of the space */
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
