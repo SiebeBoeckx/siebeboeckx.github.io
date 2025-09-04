@@ -43,6 +43,10 @@
 
     <!--<h1>Projects showcase</h1>-->
 
+    <h1 class="section-title">Work Experience</h1>
+
+    <h1 class="section-title">Academic/Personal Projects</h1>
+
     <div class="video-wrapper">
         <div class="video-container">
             <a href="/Prysn.html" class="video-item">
@@ -140,46 +144,46 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const videoItems = document.querySelectorAll('.video-item'); // Select all video items
-    
+
             videoItems.forEach(item => {
                 const video = item.querySelector('.vid'); // Select the video inside the current item
                 const overlay = item.querySelector('.overlay'); // Select the overlay inside the current item
-    
+
                 function playVideo() {
                     video.play(); // Play the video in the current item
                     overlay.style.opacity = '0'; // Hide the overlay in the current item
                 }
-    
+
                 function pauseVideo() {
                     video.pause(); // Pause the video in the current item
                     overlay.style.opacity = '1'; // Show the overlay in the current item
                 }
-    
+
                 item.addEventListener('mouseenter', playVideo); // Play video on hover
                 item.addEventListener('mouseleave', pauseVideo); // Pause video when hover ends
-    
+
                 // Add touch support for mobile devices
                 item.addEventListener('touchstart', playVideo); // Play video on touchstart
                 item.addEventListener('touchend', pauseVideo); // Pause video on touchend
             });
         });
-    
+
         function updateSubtitlePadding() {
             const subtitles = document.querySelectorAll('.subtitle');
-    
+
             subtitles.forEach(subtitle => {
                 const textWidth = subtitle.scrollWidth; // Get the width of the text
                 const parentWidth = subtitle.parentElement.clientWidth; // Get the width of the parent container
                 let marginLeft = (parentWidth / 2) - (textWidth / 2); // Calculate the left margin
-    
+
                 if (marginLeft < 20) {
                     marginLeft = 20;
                 }
-    
+
                 subtitle.style.paddingLeft = `${marginLeft}px`; // Set the calculated padding
             });
         }
-    
+
         // Using ResizeObserver to watch for changes in parent element's width
         const resizeObserver = new ResizeObserver(entries => {
             for (let entry of entries) {
@@ -188,7 +192,7 @@
                 }
             }
         });
-    
+
         // Apply ResizeObserver to parent elements of all subtitles
         const subtitleParents = document.querySelectorAll('.subtitle').forEach(subtitle => {
             const parent = subtitle.parentElement;
