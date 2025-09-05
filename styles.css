@@ -334,6 +334,7 @@ a {
 
 .video-item {
     position: relative;
+    display: block;
     flex: 1; /* Each video takes an equal share of the space */
     overflow: hidden;
     border-radius: 10px;
