@@ -363,16 +363,16 @@ a {
 
 .overlay {
     position: absolute;
-    inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0; */
+    inset: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertical centering */
-    align-items: center; /* horizontal centering */
+    justify-content: space-between; /* Push title to top/middle and tags to bottom */
+    align-items: center;
     padding: 20px;
-    pointer-events: none; /* allows clicks to pass through to the <a> (remove if overlay needs interactive elements) */
+    pointer-events: none;
     z-index: 2;
     opacity: 1;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease;
 }
 
 .overlay-text-title {
@@ -405,10 +405,8 @@ a {
     display: flex;
     gap: 10px;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    margin-top: 8px;
-    pointer-events: none; /* keep pointer-events consistent unless tags must be interactive */
+    margin-bottom: 10px; /* space from the bottom edge */
 }
 
 .tag {
