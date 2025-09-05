@@ -406,7 +406,7 @@ a {
     gap: 10px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: auto; /* Pushes tags to the bottom */
+    flex-direction: column-reverse;
     margin-bottom: 10px; /* Optional padding from bottom */
 }
 
