@@ -333,14 +333,15 @@ a {
 }
 
 .video-item {
-    position: relative;
-    display: block;
-    flex: 1; /* Each video takes an equal share of the space */
+    position: relative;     /* anchor for .overlay */
+    display: block;         /* <a> must be a block to have predictable size */
+    box-sizing: border-box;
+    flex: 1;
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: flex 0.5s ease, transform 0.5s ease;
-    height: 450px; /* Set a constant height for the videos */
+    height: 450px;
     background-color: #202920;
     border: 2px solid #415441;
 }
@@ -357,31 +358,29 @@ a {
     width: 100%;
     height: 100%;
     display: block;
+    object-fit: cover; /* ensures the video fills without changing container size */
 }
 
 .overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0; */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-    /*background-color: #181f18; */
+    justify-content: center; /* vertical centering */
+    align-items: center; /* horizontal centering */
+    padding: 20px;
+    pointer-events: none; /* allows clicks to pass through to the <a> (remove if overlay needs interactive elements) */
     z-index: 2;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
 .overlay-text-title {
+    margin: 0 0 8px 0; /* no large top margin */
     color: #d2f2c6;
     font-size: 24px;
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 10px;
-    margin-top: 45%;
-    font-weight: bold;
     text-shadow:    -1px -1px 0 #000,
                     1px -1px 0 #000,
                     -1px 1px 0 #000,
@@ -404,11 +403,12 @@ a {
 
 .tags {
     display: flex;
-    justify-content: center; /* Center the tags horizontally */
-    align-items: end;
-    flex-wrap: wrap; /* Allow tags to wrap if there are too many */
-    margin-top: auto; 
-    margin-bottom: 10px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    pointer-events: none; /* keep pointer-events consistent unless tags must be interactive */
 }
 
 .tag {
@@ -417,10 +417,8 @@ a {
     border: 2px solid #d2f2c6;
     border-radius: 5px;
     padding: 5px 10px;
-    margin: 0 5px;
     font-size: 14px;
-    text-align: center;
-} 
+}
 
 @media all and (max-width: 900px) {
     .video-container {
