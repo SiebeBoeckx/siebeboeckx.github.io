@@ -30,11 +30,11 @@
         <div class="subtitle">
             <p class="text-content">
                 My main project during this period was making a TECC (Tactical Emergency Casualty Care) system to be added into the training simulation.
-                It was not completly finished in the half a year timespan, but I did create quite a few aspects of the target system.</br>
+                It was not completly finished in the half a year timespan, but I did create quite a most aspects of the target system.</br>
                 The first and hardest part I had to create was a system for animations to partially disable. 
                 For example when the target is shot in the arm, they should not be able to use it anymore, or atleast less.
                 I did this by creating an active ragdoll system onto the existing skeletons that can be switched to when the target is shot or pushed.
-                (See the 2 skeletons in the clips).</br>
+                (See the 2 skeletons in the clips)</br>
                 The next step was creating a system for wounds. These wounds are different depending on the location of the wounds.
                 The characters also react differently to each wound by for example fainting or dropping their weapon.
                 There's also some randomness involved to best emulate real life scenarios.</br>
@@ -51,14 +51,15 @@
         </video>
         <div class="subtitle">
             <p class="text-content">
-                The final part was the TECC system itself. At the point I left it, it was simply touching the character where treatment was needed, completed the treatment.
+                The final part was the TECC system itself. At the point I left it, it was simply when you touched the character where treatment was needed, completed the treatment.
                 In case of limb wounds this meant placing a tournique higher up the limb.
                 Treating the wound would stop the characters from bleeding out and they all have a simple visual representation of the treatment being completed.
                 Expansion on this was planned using buttons that the operators would place on the location where they usually carry the specific treatments.</br>
                 Finally, the last thing I'd have to do is add networking to implement the system into the actual project, but since the existing networking
                 system was being revised and my time at XR-Labs was almost up, we decided to not implement that yet.</br>
-                Instead I added a pushing system that works for both physics simulated on kinematic pushers and the characters will fall if pushed too hard.
-                I had to create a system to manually interpolate the bones to the most fitting stand up animation to make this work as well.
+                Instead I added a pushing system that works for both physics simulated and on kinematic pushers, the characters will fall if they're pushed too hard.
+                I had to create a system to manually interpolate the bones to the most fitting stand up animation to make this work.
+                This proved more difficult than expected as physics had already been activated on the bones by this point.
             </p>
         </div>
     </div>
