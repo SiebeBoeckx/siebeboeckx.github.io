@@ -150,8 +150,8 @@ a {
 
             .image-text-flex .subtitle .text-content {
                 text-align: center; /* Center subtitle for smaller screens */
-                padding-right: 0;
-                padding-left: 0;
+                padding-right: 10px;
+                padding-left: 10px;
             }
 }
 
@@ -228,10 +228,10 @@ a {
             padding-bottom: 0; /* Remove bottom padding on smaller screens */
         }
 
-            .image-text-flex-margin .text-content .subtitle {
+            .image-text-flex-margin .subtitle .text-content {
                 text-align: center; /* Center subtitle for smaller screens */
-                padding-right: 0;
-                padding-left: 0;
+                padding-right: 5px;
+                padding-left: 5px;
             }
 }
 
@@ -307,10 +307,10 @@ a {
             padding-bottom: 0; /* Remove bottom padding on smaller screens */
         }
 
-            .video-text-flex-margin .text-content .subtitle {
+            .video-text-flex-margin .subtitle .text-content {
                 text-align: center; /* Center subtitle for smaller screens */
-                padding-right: 0;
-                padding-left: 0;
+                padding-right: 5px;
+                padding-left: 5px;
             }
 }
 
