@@ -148,7 +148,7 @@ a {
             padding-bottom: 0; /* Remove bottom padding on smaller screens */
         }
 
-            .image-text-flex .text-content .subtitle {
+            .image-text-flex .subtitle .text-content {
                 text-align: center; /* Center subtitle for smaller screens */
                 padding-right: 0;
                 padding-left: 0;
