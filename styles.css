@@ -216,11 +216,13 @@ a {
         align-items: center; /* Center the content */
         padding-left: 20px; /* Adjust padding for smaller screens */
         padding-right: 20px;
+        padding-bottom: 0px;
     }
 
         .image-text-flex-margin img {
             align-self: center; /* Center the image when stacked */
             margin-bottom: 20px; /* Add some space below the image */
+            max-width: 90%;
         }
 
         .image-text-flex-margin .text-content {
@@ -295,11 +297,13 @@ a {
         align-items: center; /* Center the content */
         padding-left: 20px; /* Adjust padding for smaller screens */
         padding-right: 20px;
+        padding-bottom: 0px;
     }
 
         .video-text-flex-margin video {
             align-self: center; /* Center the image when stacked */
             margin-bottom: 20px; /* Add some space below the image */
+            max-width: 90%;
         }
 
         .video-text-flex-margin .text-content {
