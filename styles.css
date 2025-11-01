@@ -53,6 +53,7 @@ a {
 @media all and (max-width: 800px) {
     .navigation {
         justify-content: space-around;
+        background: #2c3329;
     }
 }
 
@@ -60,6 +61,7 @@ a {
     .navigation {
         flex-flow: column wrap;
         padding: 0;
+        background: #2c3329;
     }
 
         .navigation a {
