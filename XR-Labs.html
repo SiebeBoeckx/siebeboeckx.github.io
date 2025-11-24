@@ -31,7 +31,7 @@
             <p class="text-content">
                 My main project during this period was making a TECC (Tactical Emergency Casualty Care) system to be added into the training simulation.
                 It was not completly finished in the half a year timespan, but I did create quite a most aspects of the target system.</br>
-                The first and hardest part I had to create was a system for animations to partially disable. 
+                The first and hardest part I had to create was a system for animations to partially disable.
                 For example when the target is shot in the arm, they should not be able to use it anymore, or atleast less.
                 I did this by creating an active ragdoll system onto the existing skeletons that can be switched to when the target is shot or pushed.
                 (See the 2 skeletons in the clips)</br>
@@ -63,6 +63,28 @@
                 This proved more difficult than expected as physics had already been activated on the bones by this point.
             </p>
         </div>
+    </div>
+
+    <div class="image-text-flex-margin">
+        <div class="subtitle">
+            <p class="text-content">
+                One of the most important parts during the creation of the active ragdoll system, was making sure that it didn't slow down the entire project. </br>
+                After my first iteration of the complete system, simulating 100 active ragdolls took 40-50ms, reducing the framerate significantly.
+                Thus I had to find ways to optimize the system. </br>
+                I'll cut a long story short, I reduced the amount of lookup calls as much as possible, this combined with making more lists and arrays to store data without
+                getting them every frame sped up the system by 50% already, but that was not enough. </br>
+                Secondly I decided to change as much of my stored vectors/lists/arrays into dictionaries to use their O(1) lookup speed. With a couple more
+                lookup optimizations added onto that I had reduced the frame time of 100 simulated characters to 5.3ms.</br>
+                This was already 90% faster than the original version, but it still created a 15-20fps reduction when all 100 characters were simulated, meaning I
+                was still unsatisfied, so I decided to go deep profiling.</br>
+                The conclusion I came to was that the string lookup in the dictionaries took half of all the frame time (of my system), changing the dictionaries
+                to no longer use strings as keys. Lastly I made it so the active ragdoll system didn't activate untill the character was actually shot. This
+                meant I needed to a second animation on top of the simulated one, but this was still faster than the active ragdoll system being active all the time.</br></br>
+                The eventual results are what you see in the attached image, with the frame time increase happening when I activate the active ragdoll on 100
+                characters at once, resulting in only a 2ms increase instead of 50ms.
+            </p>
+        </div>
+        <img class="img" src="Images/Profiling2.png" alt="Profiling">
     </div>
 </body>
 </html>
